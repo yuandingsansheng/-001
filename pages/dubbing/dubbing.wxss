@@ -1,0 +1,58 @@
+/* dubbing.wxss */
+
+/* container */
+
+.container {
+    width: 750rpx;
+}
+
+/* box */
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* box-item */
+
+.box-item {
+   margin-left: 30rpx;
+   height: 300rpx;
+}
+
+
+/* 配图 */
+
+.matching {
+    width: 210rpx;
+    height: 170rpx;
+}
+
+/* 简介 */
+
+.introduction {
+    font-size: 30rpx;
+}
+
+/* 难度 */
+
+.degree {
+    font-size: 34rpx;
+    color: lightblue;
+}
+
+
+/* icon */
+
+.icon {
+    width: 30rpx;
+    height: 30rpx;
+    margin-left: 30rpx;
+}
+
+/* 人数 */
+
+.amounts {
+    font-size: 22rpx;
+    color: #c0c0c0c0;
+}

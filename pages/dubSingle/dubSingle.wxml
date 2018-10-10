@@ -1,0 +1,24 @@
+<!-- dubSingle.wxml -->
+<view class='contianer'>
+    <!-- 视频 -->
+    <video src='{{videoUrl}}'></video>
+    <!-- 逐句配音 -->
+    <view wx:if='{{zhujv}}'>
+        <!-- 内容区 -->
+        <view class='content'>
+            <!-- 文字 -->
+            <view class='text'>{{text}}</view>
+            <!-- 按钮 -->
+            <view class='btn-area'>
+                <!-- 重新配音 -->
+                <button class='redub'>重新配音</button>
+                <!-- 播放 -->
+                <button class='bofang'>播放</button>
+                <!-- 配音 -->
+                <button class='dub'>配音</button>
+                <!-- 下一句 -->
+                <button class='next'>下一句</button>
+            </view>
+        </view>
+    </view>
+</view>

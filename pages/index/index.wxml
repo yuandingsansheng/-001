@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view class="container">
+    <!-- 顶部swiper -->
+    <swiper indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}' circular='true' indicator-color='#777777' indicator-active-color='#ffffff'>
+        <block wx:for='{{swiperList}}' wx:key='swiperList'>
+            <swiper-item>
+                <!-- 单个swiper的内容 -->
+                <view class='content' style='background-image: url({{item.imageUrl}})'>
+                    <!-- 文字 -->
+                    <view class='english'>{{item.english}}</view>
+                    <!-- 翻译 -->
+                    <view class='fanyi'>{{item.fanyi}}</view>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+    <!-- swiper下面遮罩 -->
+    <view class='mask'></view>
+    <!-- 每日推荐 -->
+    <view class='daily-recommendation'>
+        <!-- title -->
+        <view class='title'>每日推荐</view>
+        <view wx:for='{{dailyRecommendation}}' wx:key='dailyRecommendation'>
+            <!-- 单个推荐box -->
+            <view class='box'>
+                <!-- 介绍 -->
+                <view class='introduction'>
+                    <!-- 文字 -->
+                    <view class='text'>{{item.text}}</view>
+                    <!-- 作者 -->
+                    <view class='author'>{{item.author}}</view>
+                </view>
+                <!-- 配图 -->
+                <image class='matching' src='{{item.matchUrl}}'></image>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,137 @@
+/**index.wxss**/
+
+page {
+    width: 750rpx;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* container */
+
+.container {
+    width: 750rpx;
+    height: 100vh;
+    overflow: scroll;
+}
+
+/* swiper */
+
+swiper {
+    width: 750rpx;
+    height: 492rpx;
+}
+
+/* content */
+
+.content {
+    position: absolute;
+    top: 0;
+    width: 750rpx;
+    height: 492rpx;
+    background-size: 100% 100%;
+}
+
+/* english */
+
+.english {
+    color: #fff;
+    font-size: 30rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    margin-top: 280rpx;
+}
+
+/* 翻译 */
+
+.fanyi {
+    color: #fff;
+    font-size: 24rpx;
+    margin-top: 20rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+}
+
+/* 遮罩 */
+
+.mask {
+    width: 750rpx;
+    height: 24rpx;
+    background: #ebe7e7;
+}
+
+/* 每日推荐 */
+
+.daily-recommendation {
+    width: 750rpx;
+    height: auto;
+    margin-top: 28rpx;
+}
+
+/* title */
+
+.title {
+    font-size: 30rpx;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 59rpx;
+}
+
+/* 单个推荐 */
+
+.box {
+    width: 700rpx;
+    margin-left: 25rpx;
+    margin-right: 25rpx;
+    margin-bottom: 40rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 10rpx;
+    border-bottom: 1rpx solid #c0c0c0c0;
+}
+
+/* 去掉滚动条 */
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+/* introduction */
+
+.introduction {
+    width: 369rpx;
+    height: 170rpx;
+    font-size: 20rpx;
+}
+
+/* text */
+
+.text {
+    width: 322rpx;
+    min-height: 130rpx;
+    max-height: 150rpx;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* author */
+
+.author {
+    font-size: 18rpx;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+/* 配图 */
+
+.matching {
+    width: 257rpx;
+    height: 170rpx;
+}
