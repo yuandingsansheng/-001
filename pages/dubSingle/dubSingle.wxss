@@ -1,0 +1,62 @@
+/* dubSingle.wxss */
+
+.contianer {
+    width: 750rpx;
+}
+
+/* video */
+
+video {
+    width: 750rpx;
+}
+
+/* 内容区 */
+
+.content {
+    width: 700rpx;
+    margin-left: 25rpx;
+    font-size: 28rpx;
+}
+
+/* text */
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30rpx;
+    line-height: 50rpx;
+}
+
+/* paragraph */
+
+.paragraph {
+    width: 700rpx;
+    height: 500rpx;
+    overflow: scroll;
+}
+
+/* 去掉滚动条 */
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+/* 按钮 */
+
+.btn-area {
+    margin-top: 40rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* button */
+
+button {
+    border-radius: 50%;
+    border: 1rpx solid #c0c0c0;
+    font-size: 30rpx;
+    background: #ffe;
+}

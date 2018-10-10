@@ -3,11 +3,11 @@
     <!-- 视频 -->
     <video src='{{videoUrl}}'></video>
     <!-- 逐句配音 -->
-    <view wx:if='{{zhujv}}'>
+    <view wx:if='{{byStentebce}}'>
         <!-- 内容区 -->
         <view class='content'>
             <!-- 文字 -->
-            <view class='text'>{{text}}</view>
+            <view class='text'>{{sentence}}</view>
             <!-- 按钮 -->
             <view class='btn-area'>
                 <!-- 重新配音 -->
@@ -21,4 +21,22 @@
             </view>
         </view>
     </view>
+    <!-- 逐段配音 -->
+    <view wx:if='{{byParagraph}}'>
+        <!-- 内容区 -->
+        <view class='content'>
+            <!-- 文字 -->
+            <view class='paragraph'>{{paragraph}}</view>
+            <!-- 按钮 -->
+            <view class='btn-area'>
+                <!-- 重新配音 -->
+                <button class='redub'>重新配音</button>
+                <!-- 播放 -->
+                <button class='bofang'>播放</button>
+                <!-- 配音 -->
+                <button class='dub'>配音</button>
+            </view>
+        </view>
+    </view>
+    <!-- 底部开关按钮 -->
 </view>
