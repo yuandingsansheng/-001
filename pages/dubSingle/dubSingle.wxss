@@ -60,3 +60,28 @@ button {
     font-size: 30rpx;
     background: #ffe;
 }
+
+
+/* 底部开关按钮 */
+
+.switch {
+    width: 140rpx;
+    height: 60rpx;
+    position: absolute;
+    left: 520rpx;
+    border: 1rpx solid #c0c0c0;
+    border-radius: 40rpx;
+    margin: 40rpx;
+    font-size: 30rpx;
+    line-height: 60rpx;
+}
+
+/* 原型按钮 */
+
+.button {
+    height: 60rpx;
+    width: 60rpx;
+    background: burlywood;
+    border-radius: 50%;
+    transition: 1s;
+}
