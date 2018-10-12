@@ -1,0 +1,30 @@
+<!-- dubbing.wxml -->
+<view class='container'>
+    <!-- box -->
+    <view class='box'>
+        <view wx:for='{{dubbingList}}' wx:key='dubbingList'>
+            <!-- 单个配音 -->
+            <view class='box-item'>
+                <!-- 内容区 -->
+                <view class='content'>
+                    <!-- 配图 -->
+                    <image class='matching' src='{{item.matchingUrl}}' bindtap='dubbing' data-text='{{item.title}}'></image>
+                    <!-- 简介 -->
+                    <view class='introduction'>
+                        <!-- 标题 -->
+                        <view class='title'>{{item.title}}</view>
+                        <!-- 互動 -->
+                        <view class='re-active'>
+                            <!-- 难度 -->
+                            <text class='degree'>{{item.degree}}</text>
+                            <!-- icon -->
+                            <image class='icon' src='../../image/dubbing.png'></image>
+                            <!-- 人数 -->
+                            <text class='amounts'>{{item.amounts}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

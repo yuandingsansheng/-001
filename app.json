@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/course/course",
+    "pages/dubbing/dubbing",
+    "pages/dubSingle/dubSingle",
+    "pages/mine/mine",
+    "pages/cet4/cet4"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "流利说四六级",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home2.png"
+      },
+      {
+        "pagePath": "pages/course/course",
+        "text": "课程",
+        "iconPath": "image/course.png",
+        "selectedIconPath": "image/course2.png"
+      },
+      {
+        "pagePath": "pages/dubbing/dubbing",
+        "text": "配音",
+        "iconPath": "image/dubbing.png",
+        "selectedIconPath": "image/dubbing2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "image/mine.png",
+        "selectedIconPath": "image/mine2.png"
+      }
+    ]
+  }
+}
