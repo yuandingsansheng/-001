@@ -32,7 +32,6 @@ video {
 
 .paragraph {
     width: 700rpx;
-    height: 440rpx;
     height: 500rpx;
     overflow: scroll;
 }
@@ -44,8 +43,6 @@ video {
     height: 0;
     color: transparent;
 }
-
-/* 按钮区 */
 
 /* 按钮 */
 
@@ -63,9 +60,6 @@ button {
     font-size: 30rpx;
     background: #ffe;
 }
-
-
-
 /* 底部开关按钮 */
 
 .switch {
