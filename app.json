@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "pages": [
         "pages/index/index",
         "pages/logs/logs",
@@ -41,8 +40,7 @@
                 "selectedIconPath": "image/mine2.png"
             }
         ]
-    }
-=======
+    },
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
@@ -86,5 +84,5 @@
       }
     ]
   }
->>>>>>> 8359e1d1f7142fd4b6ab60a5b073f7dd565d0b46
+
 }
