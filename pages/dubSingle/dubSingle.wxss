@@ -32,7 +32,7 @@ video {
 
 .paragraph {
     width: 700rpx;
-    height: 500rpx;
+    height: 440rpx;
     overflow: scroll;
 }
 
@@ -44,7 +44,7 @@ video {
     color: transparent;
 }
 
-/* 按钮 */
+/* 按钮区 */
 
 .btn-area {
     margin-top: 40rpx;
@@ -65,23 +65,32 @@ button {
 /* 底部开关按钮 */
 
 .switch {
-    width: 140rpx;
+    width: 120rpx;
     height: 60rpx;
     position: absolute;
-    left: 520rpx;
-    border: 1rpx solid #c0c0c0;
+    left: 560rpx;
+    bottom: 20rpx;
     border-radius: 40rpx;
     margin: 40rpx;
     font-size: 30rpx;
     line-height: 60rpx;
+    background: rgb(69, 204, 245);
 }
 
-/* 原型按钮 */
+/* 圆型按钮 */
 
 .button {
     height: 60rpx;
     width: 60rpx;
     background: burlywood;
     border-radius: 50%;
-    transition: 1s;
+    transition: 0.5s;
+    position: absolute;
+    top: 0;
+}
+
+/* sentence，paragraph */
+
+.sentence, .paragraph {
+    transition: 0.1s;
 }

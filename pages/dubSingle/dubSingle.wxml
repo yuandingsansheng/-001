@@ -40,11 +40,11 @@
     </view>
     <!-- 底部开关按钮 -->
     <view class='switch'>
-        <!-- 圆形按钮 -->
-        <view class='button' bindtap=''></view>
         <!-- 逐句配音 -->
         <text class='sentence' style='opacity: {{sOpacity}}'>逐句</text>
         <!-- 逐段配音 -->
-        <text class='paragraph' style='display: {{pOpacity}}'>逐段</text>
+        <text class='paragraph' style='opacity: {{pOpacity}}'>逐段</text>
+        <!-- 圆形按钮 -->
+        <view class='button' bindtap='changeStatus' style='left:{{left}}rpx'></view>
     </view>
 </view>
