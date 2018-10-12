@@ -26,15 +26,13 @@ video {
     align-items: center;
     margin-top: 30rpx;
     line-height: 50rpx;
-    border: 1rpx solid #c0c0c0;
 }
 
 /* paragraph */
 
 .paragraph {
-     margin-top: 30rpx;
     width: 700rpx;
-    border: 1rpx solid #c0c0c0;
+    height: 500rpx;
     overflow: scroll;
 }
 
@@ -61,41 +59,4 @@ button {
     border: 1rpx solid #c0c0c0;
     font-size: 30rpx;
     background: #ffe;
-}
-/* 底部开关按钮 */
-
-.switch {
-    width: 130rpx;
-    height: 60rpx;
-    position: absolute;
-    left: 560rpx;
-    bottom: 20rpx;
-    border-radius: 40rpx;
-    margin: 40rpx;
-    font-size: 29rpx;
-    line-height: 58rpx;
-    background: rgb(69, 204, 245);
-}
-
-/* 圆型按钮 */
-
-.button {
-    height: 60rpx;
-    width: 60rpx;
-    background: burlywood;
-    border-radius: 50%;
-    transition: 0.5s;
-    position: absolute;
-    top: 0;
-}
-
-/* sentence，paragraph */
-
-.sen, .par {
-    transition: 0.1s;
-    color: #b67c7c;
-}
-
-.sen {
-    margin-left: 10rpx;
 }
