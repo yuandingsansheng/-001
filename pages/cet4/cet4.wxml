@@ -1,0 +1,13 @@
+<!--pages/cet4course/cet4.wxml-->
+<view class='container'>
+  <view class='title'>
+    <image class='icon' src='../../image/cet4.png'></image>CET4
+  </view>
+  <view class='lesson' wx:for='{{lessonContent}}' wx:key='lessonContent'>
+    <view class='content'>
+      <view class='no'>{{item.number}}</view>
+      <view class='text'>{{item.article}}</view>
+      <image class='icon-more' src='{{item.more}}'></image>
+    </view>
+  </view>
+</view>

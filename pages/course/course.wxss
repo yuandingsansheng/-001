@@ -1,0 +1,112 @@
+page {
+  width: 750rpx;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 750rpx;
+  height: 100vh;
+  overflow: scroll;
+  background-color: #ebe7e7;
+}
+
+.classChoose {
+  display: flex;
+  justify-content: center;
+  width: 750rpx;
+  height: 213rpx;
+  margin-bottom: 22rpx;
+  padding: 24rpx 0;
+  background-color: #fff;
+}
+
+.Myclass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 286rpx;
+  height: 167rpx;
+  margin: 0 50rpx;
+  background-color: #2ea48d;
+  border-radius: 10rpx;
+  font-family: MicrosoftYaHei;
+  font-size: 36rpx;
+  color: #fff;
+}
+
+.Allclass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 286rpx;
+  height: 167rpx;
+  margin: 0 50rpx;
+  background-color: #ebe7e7;
+  border-radius: 10rpx;
+  text-align: center;
+  font-family: MicrosoftYaHei;
+  font-size: 36rpx;
+}
+
+.yes {
+  background-color: #2ea48d;
+  color: #fff;
+}
+
+.default {
+  background-color: #ebe7e7;
+  color: #000;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.myclassContent {
+  background-color: #fff;
+  margin: 0;
+  width: 750rpx;
+  height: 214rpx;
+  border-bottom: solid 1px #ebe7e7;
+}
+
+.icon {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin: 0 16rpx;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 85rpx 45rpx;
+  text-align: center;
+}
+
+.name {
+  text-align: center;
+}
+
+.icon-more {
+  display: inline-block;
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 36rpx;
+}
+
+.icon-all {
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+  margin: 0 16rpx;
+}

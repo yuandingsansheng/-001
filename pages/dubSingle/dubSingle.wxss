@@ -32,7 +32,11 @@ video {
 
 .paragraph {
     width: 700rpx;
+<<<<<<< HEAD
     height: 440rpx;
+=======
+    height: 500rpx;
+>>>>>>> 8359e1d1f7142fd4b6ab60a5b073f7dd565d0b46
     overflow: scroll;
 }
 
@@ -44,7 +48,11 @@ video {
     color: transparent;
 }
 
+<<<<<<< HEAD
 /* 按钮区 */
+=======
+/* 按钮 */
+>>>>>>> 8359e1d1f7142fd4b6ab60a5b073f7dd565d0b46
 
 .btn-area {
     margin-top: 40rpx;
@@ -60,6 +68,7 @@ button {
     font-size: 30rpx;
     background: #ffe;
 }
+<<<<<<< HEAD
 
 
 /* 底部开关按钮 */
@@ -94,3 +103,5 @@ button {
 .sentence, .paragraph {
     transition: 0.1s;
 }
+=======
+>>>>>>> 8359e1d1f7142fd4b6ab60a5b073f7dd565d0b46

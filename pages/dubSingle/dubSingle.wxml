@@ -39,6 +39,7 @@
         </view>
     </view>
     <!-- 底部开关按钮 -->
+<<<<<<< HEAD
     <view class='switch'>
         <!-- 逐句配音 -->
         <text class='sentence' style='opacity: {{sOpacity}}'>逐句</text>
@@ -47,4 +48,6 @@
         <!-- 圆形按钮 -->
         <view class='button' bindtap='changeStatus' style='left:{{left}}rpx'></view>
     </view>
+=======
+>>>>>>> 8359e1d1f7142fd4b6ab60a5b073f7dd565d0b46
 </view>
