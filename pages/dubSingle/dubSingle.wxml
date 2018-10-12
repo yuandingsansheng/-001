@@ -17,7 +17,7 @@
                 <!-- 配音 -->
                 <button class='dub'>配音</button>
                 <!-- 下一句 -->
-                <button class='next'>下一句</button>
+                <button class='next' bindtap='nextSentence'>下一句</button>
             </view>
         </view>
     </view>
@@ -35,16 +35,24 @@
                 <button class='bofang'>播放</button>
                 <!-- 配音 -->
                 <button class='dub'>配音</button>
+                <!-- 下一段 -->
+                <button class='next' bindtap='nextParagraph'>下一段</button>
             </view>
         </view>
     </view>
+
+    <!-- 预览 -->
+    <view class='preview' wx:if='{{done}}'>
+        <button class='preview-btn' bindtap='preview'>预览</button>
+    </view>
+
     <!-- 底部开关按钮 -->
     <view class='switch'>
         <!-- 逐句配音 -->
-        <text class='sentence' style='opacity: {{sOpacity}}'>逐句</text>
+        <text class='sen' style='opacity: {{sOpacity}}'>逐句</text>
         <!-- 逐段配音 -->
-        <text class='paragraph' style='opacity: {{pOpacity}}'>逐段</text>
+        <text class='par' style='opacity: {{pOpacity}}'>逐段</text>
         <!-- 圆形按钮 -->
-        <view class='button' bindtap='changeStatus' style='left:{{left}}rpx'></view>
+        <view class='button'  bindtouchstart='changeStatus' style='left:{{left}}rpx'></view>
     </view>
 </view>
