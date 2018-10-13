@@ -17,11 +17,7 @@
                 <!-- 配音 -->
                 <button class='dub'>配音</button>
                 <!-- 下一句 -->
-<<<<<<< HEAD
                 <button class='next' bindtap='next'>下一句</button>
-=======
-                <button class='next'>下一句</button>
->>>>>>> 70972dabc76b6c9307ad12dcbd5f2d101502721b
             </view>
         </view>
     </view>
@@ -39,11 +35,8 @@
                 <button class='bofang'>播放</button>
                 <!-- 配音 -->
                 <button class='dub'>配音</button>
-<<<<<<< HEAD
                 <!-- 下一段 -->
                 <button class='next' bindtap='next'>下一段</button>
-=======
->>>>>>> 70972dabc76b6c9307ad12dcbd5f2d101502721b
             </view>
         </view>
     </view>

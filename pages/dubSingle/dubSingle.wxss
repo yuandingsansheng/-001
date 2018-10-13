@@ -70,7 +70,6 @@ video {
     line-height: 60rpx;
     margin-top: 200rpx;
 }
-<<<<<<< HEAD
 
 /* 底部开关按钮 */
 
@@ -109,5 +108,3 @@ video {
 .sen {
     margin-left: 10rpx;
 }
-=======
->>>>>>> 70972dabc76b6c9307ad12dcbd5f2d101502721b
