@@ -1,4 +1,3 @@
-
 Page({
 
     /**
@@ -10,6 +9,7 @@ Page({
         sOpacity: 0,
         pOpacity: 1,
         left: 0,
+        done: false,
         videoUrl: 'http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400',
         sentence: '',
         paragraph: '',
@@ -25,29 +25,82 @@ Page({
     // 滑动
     changeStatus: function() {
         let that = this;
-        that.setData({
-            byStentebce: !that.data.byStentebce, // 逐句
-            byParagraph: !that.data.byParagraph, // 逐段
-        });
 
-        if (that.data.byStentebce) { // 如果是逐句
+        // 只有在 index ==0 的时候才可以修改逐句逐段的配音方式
+        if (that.data.indexPar == 0 && that.data.indexSen == 0) {
             that.setData({
-                sOpacity: 1,
-                pOpacity: 0,
-                left: 70,
-            })
-        } else if (that.data.byParagraph) { // 如果是逐段
-            that.setData({
-                sOpacity: 0,
-                pOpacity: 1,
-                left: 0,
+                byStentebce: !that.data.byStentebce, // 逐句
+                byParagraph: !that.data.byParagraph, // 逐段
+            });
+
+            if (that.data.byStentebce) { // 如果是逐句
+                that.setData({
+                    sOpacity: 1,
+                    pOpacity: 0,
+                    left: 70,
+                    sentence: that.data.sentenceAll[that.data.indexSen],
+                })
+            } else if (that.data.byParagraph) { // 如果是逐段
+                that.setData({
+                    sOpacity: 0,
+                    pOpacity: 1,
+                    left: 0,
+                    paragraph: that.data.article[that.data.indexPar],
+                })
+            }
+        } else {
+            wx.showToast({
+                title: '当前不可以改变配音方式哦',
             })
         }
+
     },
 
     // 下一句
-    nextSentence: function() {
+    next: function() {
+        let that = this;
+        let index = 0;
+        if (that.data.byStentebce) { // 如果是逐句
+            index = that.data.indexSen;
+            if (index < that.data.sentenceAll.length - 1) { // 文章尚未结束
+                index += 1;
+                that.setData({
+                    sentence: that.data.sentenceAll[index],
+                    indexSen: index
+                })
+            } else { // 文章结束了
+                that.setData({
+                    done: true,
+                    byStentebce: false, // 逐句
+                    byParagraph: false, // 逐段
+                })
 
+            }
+
+        } else if (that.data.byParagraph) { // 如果是逐段
+            index = that.data.indexPar;
+            if (index < that.data.article.length - 1) { // 文章尚未结束
+                index += 1;
+                that.setData({
+                    paragraph: that.data.article[index],
+                    indexPar: index
+                })
+            } else { // 文章结束了
+                that.setData({
+                    done: true,
+                    byStentebce: false, // 逐句
+                    byParagraph: false, // 逐段
+                })
+
+            }
+        }
+    },
+
+    // 配音完成，进入预览界面
+    preview:function(){
+        wx.navigateTo({
+            url: '../preview/preview',
+        })
     },
 
     /**
@@ -55,16 +108,16 @@ Page({
      */
     onLoad: function(options) {
         let that = this;
-        if(that.data.byParagraph) {
+        if (that.data.byParagraph) {
             that.setData({
                 paragraph: that.data.article[that.data.indexPar],
             })
-        }else if(that.data.byStentebce) {
+        } else if (that.data.byStentebce) {
             that.setData({
                 sentence: that.data.sentenceAll[that.data.indexSen],
             })
         }
-        
+
     },
 
     /**

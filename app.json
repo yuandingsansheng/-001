@@ -5,6 +5,7 @@
     "pages/course/course",
     "pages/dubbing/dubbing",
     "pages/dubSingle/dubSingle",
+    "pages/preview/preview",
     "pages/mine/mine",
     "pages/cet4/cet4"
   ],

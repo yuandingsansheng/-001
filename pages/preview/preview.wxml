@@ -1,0 +1,39 @@
+<!-- preview.wxml-->
+<view class='container'>
+    <video src='videoUrl'></video>
+    <!-- 说点什么 -->
+    <view class='my-words'>
+        <view class='label'>说点什么</view>
+        <input type='text'></input>
+    </view>
+    <!-- 其他推荐 -->
+    <view class='others'>
+        <view class='title'>再看看其他的吧</view>
+        <view class='recommend'>
+            <view wx:for='{{recommend}}' wx:key='recommend'>
+                <!-- 单个配音 -->
+                <view class='box-item'>
+                    <!-- 内容区 -->
+                    <view class='content'>
+                        <!-- 配图 -->
+                        <image class='matching' src='{{item.matchingUrl}}' bindtap='dubbing' data-text='{{item.title}}'></image>
+                        <!-- 简介 -->
+                        <view class='introduction'>
+                            <!-- 标题 -->
+                            <view class='title'>{{item.title}}</view>
+                            <!-- 互動 -->
+                            <view class='re-active'>
+                                <!-- 难度 -->
+                                <text class='degree'>{{item.degree}}</text>
+                                <!-- icon -->
+                                <image class='icon' src='../../image/dubbing.png'></image>
+                                <!-- 人数 -->
+                                <text class='amounts'>{{item.amounts}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

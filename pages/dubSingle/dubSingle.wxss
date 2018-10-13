@@ -54,14 +54,25 @@ video {
     justify-content: space-between;
 }
 
-/* button */
+/* button
 
-button {
+.button {
     border-radius: 50%;
     border: 1rpx solid #c0c0c0;
     font-size: 30rpx;
     background: #ffe;
+} */
+
+/* 预览 */
+
+.preview-btn {
+    width: 160rpx;
+    height: 60rpx;
+    font-size: 32rpx;
+    line-height: 60rpx;
+    margin-top: 200rpx;
 }
+
 /* 底部开关按钮 */
 
 .switch {

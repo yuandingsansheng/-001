@@ -17,7 +17,7 @@
                 <!-- 配音 -->
                 <button class='dub'>配音</button>
                 <!-- 下一句 -->
-                <button class='next' bindtap='nextSentence'>下一句</button>
+                <button class='next' bindtap='next'>下一句</button>
             </view>
         </view>
     </view>
@@ -36,7 +36,7 @@
                 <!-- 配音 -->
                 <button class='dub'>配音</button>
                 <!-- 下一段 -->
-                <button class='next' bindtap='nextParagraph'>下一段</button>
+                <button class='next' bindtap='next'>下一段</button>
             </view>
         </view>
     </view>
