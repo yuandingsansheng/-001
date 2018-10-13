@@ -26,15 +26,13 @@ video {
     align-items: center;
     margin-top: 30rpx;
     line-height: 50rpx;
-    border: 1rpx solid #c0c0c0;
 }
 
 /* paragraph */
 
 .paragraph {
-     margin-top: 30rpx;
     width: 700rpx;
-    border: 1rpx solid #c0c0c0;
+    height: 500rpx;
     overflow: scroll;
 }
 
@@ -72,6 +70,7 @@ video {
     line-height: 60rpx;
     margin-top: 200rpx;
 }
+<<<<<<< HEAD
 
 /* 底部开关按钮 */
 
@@ -110,3 +109,5 @@ video {
 .sen {
     margin-left: 10rpx;
 }
+=======
+>>>>>>> 70972dabc76b6c9307ad12dcbd5f2d101502721b
