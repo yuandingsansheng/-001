@@ -11,11 +11,11 @@
             <!-- 按钮 -->
             <view class='btn-area'>
                 <!-- 重新配音 -->
-                <button class='redub'>重新配音</button>
+                <button class='redub' bindtap='redub'>重新配音</button>
                 <!-- 播放 -->
-                <button class='bofang'>播放</button>
+                <button class='bofang' bindtap='bofang'>播放</button>
                 <!-- 配音 -->
-                <button class='dub'>配音</button>
+                <button class='dub' bindtap='dub'>配音</button>
                 <!-- 下一句 -->
                 <button class='next' bindtap='next'>下一句</button>
             </view>
@@ -26,19 +26,26 @@
         <!-- 内容区 -->
         <view class='content'>
             <!-- 文字 -->
-            <view class='paragraph'>{{paragraph}}</view>
+            <view class='paragraph'>{{article}}</view>
             <!-- 按钮 -->
             <view class='btn-area'>
                 <!-- 重新配音 -->
-                <button class='redub'>重新配音</button>
+                <button class='redub' bindtap='redub'>重新配音</button>
                 <!-- 播放 -->
-                <button class='bofang'>播放</button>
+                <button class='bofang' bindtap='bofang'>播放</button>
                 <!-- 配音 -->
-                <button class='dub'>配音</button>
-                <!-- 下一段 -->
-                <button class='next' bindtap='next'>下一段</button>
+                <button class='dub' bindtap='dub'>配音</button>
             </view>
         </view>
     </view>
+    <!-- 预览 -->
+    <view class='preview' wx:if='{{done}}'>
+        <button class='preview-btn' bindtap='preview'>预览</button>
+    </view>
     <!-- 底部开关按钮 -->
+    <view class='switch'>
+        <text class='sen' style='opacity:{{sOpacity}}'>逐句</text> 
+        <text class='par'style='opacity:{{pOpacity}}'>整片</text>
+        <view class='button' bindtouchstart='changeStatus' style='left:{{left}}rpx'></view>
+    </view>
 </view>

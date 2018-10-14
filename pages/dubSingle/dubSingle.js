@@ -12,22 +12,29 @@ Page({
         done: false,
         videoUrl: 'http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400',
         sentence: '',
-        paragraph: '',
         sentenceAll: ["The great pleasure in life is doing what people say you cannot do.", "If you saw the darkness in front of you, don't be afraid, that's because sunshine is at your back.", "ake nothing for granted. Know that the harder you work, the luckier you'll get."],
-        article: ['I have a dream that one day this nation will rise up and live out the true meaning of its creed: "We hold these truths to be self-evident, that all men are created equal."', 'I have a dream that one day on the red hills of Georgia,the sons of former slaves and the sons of former slave owners will be able to sit down together at the table of brotherhood.I have a dream that one day even the state of Mississippi,a state sweltering with the heat of injustice,sweltering with the heat of oppression,will be transformed into an oasis of freedom and justice.', 'I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin but by the content of their character.', 'I have a dream today!I have a dream that one day, down in Alabama, with its vicious racists, with its governor having his lips dripping with the words of "interposition" and "nullification" --one day right there in Alabama little black boys and black girls will be able to join hands with little white boys and white girls as sisters and brothers.I have a dream today!', 'I have a dream that one day every valley shall be exalted, and every hill and mountain shall be made low, the rough places will be made plain, and the crooked places will be made straight; "and the glory of the Lord shall be revealed and all flesh shall see it together."'],
+        article: 'I have a dream that one day this nation will rise up and live out the true meaning of its creed: "We hold these truths to be self-evident, that all men are created equal."',
         indexSen: 0, // 句子数组下标
-        indexPar: 0, // 段落数组下标
-
-
+        src: '', // 录音
     },
 
+
+    // 提示
+    tip: function(msg) {
+        wx.showModal({
+            title: '提示',
+            content: msg,
+            showCancel: false
+        })
+    },
 
     // 滑动
     changeStatus: function() {
         let that = this;
 
+        // 
         // 只有在 index ==0 的时候才可以修改逐句逐段的配音方式
-        if (that.data.indexPar == 0 && that.data.indexSen == 0) {
+        if (that.data.indexSen == 0) {
             that.setData({
                 byStentebce: !that.data.byStentebce, // 逐句
                 byParagraph: !that.data.byParagraph, // 逐段
@@ -45,14 +52,42 @@ Page({
                     sOpacity: 0,
                     pOpacity: 1,
                     left: 0,
-                    paragraph: that.data.article[that.data.indexPar],
                 })
             }
         } else {
-            wx.showToast({
-                title: '当前不可以改变配音方式哦',
-            })
+            that.tip('当前不可以改变配音方式哦')
         }
+
+    },
+
+    // 
+    dub: function() {
+        let that = this;
+       that.recorderManager.start({
+           format: 'mp3'
+       })
+
+    },
+
+    // 播放
+    bofang: function() {
+        let that = this;
+        var src = that.data.src;
+        if (src == '') {
+            that.tip("请先录音！")
+            return;
+        }
+        that.innerAudioContext.src = that.data.src;
+        that.innerAudioContext.play()
+    },
+
+    // 重新配音
+    redub:function() {
+        let that = this;
+        let that = this;
+        that.recorderManager.start({
+            format: 'mp3'
+        })
 
     },
 
@@ -60,44 +95,26 @@ Page({
     next: function() {
         let that = this;
         let index = 0;
-        if (that.data.byStentebce) { // 如果是逐句
-            index = that.data.indexSen;
-            if (index < that.data.sentenceAll.length - 1) { // 文章尚未结束
-                index += 1;
-                that.setData({
-                    sentence: that.data.sentenceAll[index],
-                    indexSen: index
-                })
-            } else { // 文章结束了
-                that.setData({
-                    done: true,
-                    byStentebce: false, // 逐句
-                    byParagraph: false, // 逐段
-                })
+        index = that.data.indexSen;
+        if (index < that.data.sentenceAll.length - 1) { // 文章尚未结束
+            index += 1;
+            that.setData({
+                sentence: that.data.sentenceAll[index],
+                indexSen: index
+            })
+        } else { // 文章结束了
+            that.setData({
+                done: true,
+                byStentebce: false, // 逐句
+                byParagraph: false, // 逐段
+            })
 
-            }
-
-        } else if (that.data.byParagraph) { // 如果是逐段
-            index = that.data.indexPar;
-            if (index < that.data.article.length - 1) { // 文章尚未结束
-                index += 1;
-                that.setData({
-                    paragraph: that.data.article[index],
-                    indexPar: index
-                })
-            } else { // 文章结束了
-                that.setData({
-                    done: true,
-                    byStentebce: false, // 逐句
-                    byParagraph: false, // 逐段
-                })
-
-            }
         }
+
     },
 
     // 配音完成，进入预览界面
-    preview:function(){
+    preview: function() {
         wx.navigateTo({
             url: '../preview/preview',
         })
@@ -108,15 +125,26 @@ Page({
      */
     onLoad: function(options) {
         let that = this;
-        if (that.data.byParagraph) {
-            that.setData({
-                paragraph: that.data.article[that.data.indexPar],
-            })
-        } else if (that.data.byStentebce) {
+        if (that.data.byStentebce) {
             that.setData({
                 sentence: that.data.sentenceAll[that.data.indexSen],
             })
         }
+        that.recorderManager = wx.getRecorderManager();
+        that.recorderManager.onError(()=> {
+            that.tip("录音失败");
+        });
+        that.recorderManager.onStop((res)=> {
+            that.setData({
+                src: res.tempFilePath
+            });
+            console.log(res.tempFilePath);
+            that.tip("录音完成");
+        });
+        this.innerAudioContext = wx.createInnerAudioContext();
+        this.innerAudioContext.onError((res) => {
+            that.tip("播放录音失败！")
+        })
 
     },
 

@@ -13,7 +13,37 @@ video {
 /* 说点什么 */
 
 .my-words {
-    
+    font-size: 30rpx;
+
+}
+
+/* input-text */
+.input-text {
+    width: 740rpx;
+    height: 100rpx;
+    margin: 10rpx auto;
+    border: 1rpx solid #c0c0c0c0;
+}
+
+/* ohters */
+
+.others {
+    width: 750rpx;
+    height: 450rpx;
+    overflow: scroll;
+    font-size: 30rpx;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+/* 推荐 */
+.recommend {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* box-item */
@@ -58,4 +88,14 @@ video {
 .amounts {
     font-size: 22rpx;
     color: #c0c0c0c0;
+}
+
+/* 底部按钮 */
+
+.btn-area {
+    width: 750rpx;
+    height: 100rpx;
+    display: flex;
+    position: absolute;
+    bottom: 0rpx;
 }

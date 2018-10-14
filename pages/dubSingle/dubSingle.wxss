@@ -32,7 +32,7 @@ video {
 
 .paragraph {
     width: 700rpx;
-    height: 500rpx;
+    height: 400rpx;
     overflow: scroll;
 }
 
