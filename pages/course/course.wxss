@@ -6,107 +6,77 @@ page {
 }
 
 .container {
+  display: flex;
+   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 750rpx;
   height: 100vh;
   overflow: scroll;
   background-color: #ebe7e7;
 }
 
-.classChoose {
+.swiper-block{
+  height: 850rpx;
+  width: 100%;
+} 
+.swiper-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: flex-start; */
+  /* overflow:unset; */
+}
+
+.course{
   display: flex;
   justify-content: center;
-  width: 750rpx;
-  height: 213rpx;
-  margin-bottom: 22rpx;
-  padding: 24rpx 0;
-  background-color: #fff;
+  align-items: center;
+  flex-direction: column;
+  width: 498rpx;
+  height: 734rpx;
+  background-color: #ffffff;
+	box-shadow: 0rpx 3rpx 7rpx 0rpx 
+		rgba(0, 0, 0, 0.5);
+	border-radius: 3rpx;
+  z-index: 1;  
+}
+
+.title{
+  margin-bottom: 54rpx;
+  font-size: 36rpx;
+}
+
+.pic{
+	width: 243rpx;
+	height: 370rpx;
+  margin-bottom: 78rpx;
+}
+
+.introduce{
+	width: 364rpx;
+	height: 62rpx;
+	font-family: MicrosoftYaHei;
+	font-size: 22rpx;
+  text-align: center;
+}
+
+.active{
+  transform: scale(1.1);
+  transition:all .2s ease-in 0s;
+  z-index: 20; 
 }
 
 .Myclass {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 286rpx;
-  height: 167rpx;
-  margin: 0 50rpx;
+  width: 332rpx;
+  height: 67rpx;
+  margin-top: 80rpx;
   background-color: #2ea48d;
   border-radius: 10rpx;
   font-family: MicrosoftYaHei;
   font-size: 36rpx;
   color: #fff;
-}
-
-.Allclass {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 286rpx;
-  height: 167rpx;
-  margin: 0 50rpx;
-  background-color: #ebe7e7;
-  border-radius: 10rpx;
-  text-align: center;
-  font-family: MicrosoftYaHei;
-  font-size: 36rpx;
-}
-
-.yes {
-  background-color: #2ea48d;
-  color: #fff;
-}
-
-.default {
-  background-color: #ebe7e7;
-  color: #000;
-}
-
-.show {
-  display: block;
-}
-
-.hidden {
-  display: none;
-}
-
-.myclassContent {
-  background-color: #fff;
-  margin: 0;
-  width: 750rpx;
-  height: 214rpx;
-  border-bottom: solid 1px #ebe7e7;
-}
-
-.icon {
-  display: inline-block;
-  width: 40rpx;
-  height: 40rpx;
-  vertical-align: middle;
-  margin: 0 16rpx;
-}
-
-.content {
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 85rpx 45rpx;
-  text-align: center;
-}
-
-.name {
-  text-align: center;
-}
-
-.icon-more {
-  display: inline-block;
-  width: 36rpx;
-  height: 36rpx;
-  margin-left: 36rpx;
-}
-
-.icon-all {
-  display: inline-block;
-  width: 50rpx;
-  height: 50rpx;
-  vertical-align: middle;
-  margin: 0 16rpx;
 }

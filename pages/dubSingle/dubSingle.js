@@ -84,7 +84,6 @@ Page({
     // 重新配音
     redub:function() {
         let that = this;
-        let that = this;
         that.recorderManager.start({
             format: 'mp3'
         })

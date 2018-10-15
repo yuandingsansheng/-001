@@ -1,0 +1,15 @@
+<view class='container'>
+  <view class='content' style='background-image: url({{textImg}})'>
+    <scroll-view class='scrollslipe' scroll-y='true'>
+      <view class='text' wx:for='{{content}}'>
+        {{item.text}}
+      </view>
+    </scroll-view>
+  </view>
+  <view class='btn'>
+    <image class='prev butto' src='../../image/pre.png'></image>
+    <image class='play butto' src='../../image/play.png'></image>
+    <image class='next butto' src='../../image/next.png'></image>
+  </view>
+  <view class='exam'></view>
+</view>

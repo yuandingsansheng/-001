@@ -1,31 +1,16 @@
 <view class='container'>
-  <!-- 切换课程 -->
-  <view class='classChoose'>
-    <view class='Myclass {{selected?"yes":"default"}}' bindtap='selected'>我的课程</view>
-    <view class='Allclass {{selected1?"yes":"default"}}' bindtap='selected1'>全部课程</view>
-  </view>
-
-  <!-- 课程内容 -->
+  <!-- 滑动切换课程 -->
+  <swiper class='swiper-block' current='0' previous-margin="110rpx" next-margin="60rpx" bindchange="swiperChange">
+    <block wx:for='{{courseInfo}}' wx:key='courseInfo' wx:index="{{index}}">
+      <swiper-item class="swiper-item">
+        <view class='course {{swiperIndex == index ? "active" : ""}}' bindtap='toCourse' data-id='{{index}}'>
+          <view class='title'>{{item.title}}</view>
+          <image class='pic' src='{{item.pic}}'></image>
+          <view class='introduce'>{{item.introduce}}</view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
   <!-- 我的课程 -->
-  <view class="{{selected?'show':'hidden'}}">
-    <view class='myclassContent' wx:for='{{courseContent}}' wx:key='courseContent'>
-      <view class='content'>
-        <view class='name'>
-          <image class='icon' src='{{item.icon}}'></image>{{item.name}}</view>
-        <view class='type'>{{item.type}}
-          <image class='icon-more' src='{{item.more}}'></image>
-        </view>
-      </view>
-    </view>
-  </view>
-  <!-- 全部课程 -->
-  <view class="{{selected1?'show':'hidden'}}"><view class='myclassContent' wx:for='{{allcourseContent}}' wx:key='allcourseContent'>
-      <view class='content' bindtap='click' data-name='{{item.name}}'>
-        <view class='name'>
-          <image class='icon-all' src='{{item.icon}}'></image>{{item.name}}</view>
-        <view class='type'>
-          <image class='icon-more' src='{{item.more}}'></image>
-        </view>
-      </view>
-    </view></view>
+  <view class='Myclass'>我的课程</view>
 </view>

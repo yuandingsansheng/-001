@@ -1,0 +1,55 @@
+/* pages/courseexam/courseexam.wxss */
+
+.container {
+  align-items: center;
+  width: 750rpx;
+  height: 100vh;
+  overflow: scroll;
+  background-color: #ebe7e7;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 750rpx;
+  height: 412rpx;
+  background-size: contain;
+	/* font-family: PingFang-SC-Bold; */
+	font-size: 18rpx;
+	color: #ffffff;
+}
+
+.scrollslipe{
+  height: 300rpx;
+  overflow: auto;
+}
+
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}
+
+.text{
+  margin: 41rpx 84rpx 0 83rpx;
+  text-align: center;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120rpx;
+}
+
+.butto{
+	width: 58rpx;
+	height: 59rpx;
+  margin-right: 115rpx;
+}
+
+.prev{
+  margin-left: 120rpx;
+}
